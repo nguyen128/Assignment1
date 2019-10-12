@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="Mp3.Pages.Upload"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mp3.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer Margin="20">
+
+
+
+        <StackPanel Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Name"/>
+                <TextBox Grid.Column='1' x:Name="name"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="name_er" Foreground="Red" Visibility="Collapsed"></TextBlock>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Description"/>
+                <TextBox Grid.Column='1' x:Name="description"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="description_er" Foreground="Red"></TextBlock>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Singer"/>
+                <TextBox Grid.Column='1' x:Name="singer"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="singer_er" Foreground="Red"></TextBlock>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Author"/>
+                <TextBox Grid.Column='1' x:Name="author"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="author_er" Foreground="Red"></TextBlock>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Thumbnail"/>
+                <TextBox Grid.Column='1' x:Name="thumbnail"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="thumbnail_er" Foreground="Red"></TextBlock>
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Link"/>
+                <TextBox Grid.Column='1' x:Name="link"></TextBox>
+                <TextBlock Grid.Column="2" x:Name="link_er" Foreground="Red"></TextBlock>
+            </Grid>
+            
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Click="ButtonBase_OnClick">Upload</Button>
+                <Button Grid.Column="1" Click="Button_Reset">Reset</Button>
+            </Grid>
+            
+        </StackPanel>
+    </ScrollViewer>
+</Page>

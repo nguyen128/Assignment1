@@ -1,0 +1,93 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Mp3.Pages.NaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mp3.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:Mp3.Entity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:ConnectionId='2' x:Name="NavView"
+                                                
+                                                          
+                                                              >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="home" Icon="Home" Content="Home"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader"
+                                           Content="Main pages"/>
+
+                <NavigationViewItem x:ConnectionId='4' Tag="upload" Content="Upload" x:Name="upload">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE752;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem x:ConnectionId='5' Tag="listsong" Content="List Song" x:Name="listsong">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE93C;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem x:ConnectionId='6' Tag="mysong" Icon="Audio" Content="My Song" x:Name="mysong"/>
+
+                <NavigationViewItem Tag="freesong" Content="Free Songs">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE93C;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                
+                <NavigationViewItem x:ConnectionId='7' Tag="login" Content="Login" x:Name="login">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem x:ConnectionId='8' Tag="register" Content="Register" x:Name="register">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE710;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem x:ConnectionId='9' Tag="profile" Content="User Profile" x:Name="profile">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE779;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.AutoSuggestBox>
+                <!-- See AutoSuggestBox documentation for
+                 more info about how to implement search. -->
+                <AutoSuggestBox x:ConnectionId='10' x:Name="NavViewSearchBox" QueryIcon="Find"/>
+            </NavigationView.AutoSuggestBox>
+
+            
+                <Frame x:ConnectionId='11' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                                                                   />
+            
+        </NavigationView>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger x:ConnectionId='12'
+                                                                                   />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--Remove the next 3 lines for left-only navigation.-->
+                        <Setter Target="NavView.PaneDisplayMode" Value="Left"/>
+                        <!--<Setter Target="NavViewSearchBox.Width" Value="200"/>
+                        <Setter Target="MainPagesHeader.Visibility" Value="Collapsed"/>-->
+                        <!--Leave the next line for left-only navigation.-->
+                        <Setter Target="ContentFrame.Padding" Value="24,0,24,24"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
+

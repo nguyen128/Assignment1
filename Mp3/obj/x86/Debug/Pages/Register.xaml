@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Mp3.Pages.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mp3.Pages"
+    xmlns:m="using:Mp3.Entity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <StackPanel HorizontalAlignment="Center">
+        <RelativePanel>
+            <Button x:ConnectionId='22' x:Name="button_cap" Width="100" Height="100" Background="LightGray" Content="Add photo"                      Margin="0,24"/>
+            <Image x:ConnectionId='23' x:Name="Avatar" Width="100" Height="100" Margin="24, 24, 0, 24" RelativePanel.RightOf="button_cap"></Image>
+        </RelativePanel>
+        <StackPanel Margin="0, 0 , 0, 10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="210"/>
+                    <ColumnDefinition Width="210"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Firstname" Margin="0, 0, 20, 0"/>
+                <TextBox x:ConnectionId='18' Grid.Column="0" Grid.Row="1" x:Name="firstname" Margin="0, 0, 20, 5"></TextBox>
+                <TextBlock x:ConnectionId='19' Grid.Column="0" Grid.Row="2" x:Name="firstname_er" Foreground="Red" Visibility="Collapsed" Margin="0, 0, 20, 0"/>
+
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="Lastname" Margin="20,0,0,0"/>
+                <TextBox x:ConnectionId='20' Grid.Column="1" Grid.Row="1" x:Name="lastname" Margin="20,0,0,5"></TextBox>
+                <TextBlock x:ConnectionId='21' Grid.Column="1" Grid.Row="2" x:Name="lastname_er" Foreground="Red" Visibility="Collapsed" Margin="20,0,0,0"/>
+            </Grid>
+        </StackPanel>
+
+        <TextBox x:ConnectionId='2' x:Name="email" Header= "Email" Width="420" HorizontalAlignment="Left" Margin="0, 0 , 0, 10"/>
+        <TextBlock x:ConnectionId='3' x:Name="email_er" Foreground="Red" Width="420" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <PasswordBox x:ConnectionId='4' x:Name="password" Header= "Password" Width="420" HorizontalAlignment="Left" Margin="0, 0 , 0, 10"/>
+        <TextBlock x:ConnectionId='5' x:Name="password_er" Foreground="Red" Width="420" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <TextBox x:ConnectionId='6' x:Name="address" Header= "Address" Width="420" HorizontalAlignment="Left" Margin="0, 0 , 0, 10"/>
+        <TextBlock x:ConnectionId='7' x:Name="address_er" Foreground="Red" Width="420" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <TextBox x:ConnectionId='8' x:Name="introduction" Header= "Introduction" Width="420" HorizontalAlignment="Left" Margin="0, 0 , 0, 10"/>
+        <TextBlock x:ConnectionId='9' x:Name="introduction_er" Foreground="Red" Width="420" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <TextBox x:ConnectionId='10' x:Name="phone" Header= "Phone" Width="420" HorizontalAlignment="Left" Margin="0, 0 , 0, 10"/>
+        <TextBlock x:ConnectionId='11' x:Name="phone_er" Foreground="Red" Width="420" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        <StackPanel Margin="0, 0 , 0, 10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Birthday" Margin="0, 0, 0, 0"/>
+                <DatePicker x:ConnectionId='14' Grid.Column="0" Grid.Row="1" x:Name="birthday" Margin="0, 0, 0, 5"></DatePicker>
+                <TextBlock x:ConnectionId='15' Grid.Column="0" Grid.Row="2" x:Name="birthday_er" Foreground="Red" Visibility="Collapsed" Margin="0, 0, 0, 0"/>
+
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="Gender" Margin="20,0,0,0"/>
+                <ComboBox x:ConnectionId='16' Grid.Column="1" Grid.Row="1" x:Name="gender" Margin="20,0,0,5" Width="100"></ComboBox>
+                <TextBlock x:ConnectionId='17' Grid.Column="1" Grid.Row="2" x:Name="gender_er" Foreground="Red" Visibility="Collapsed" Margin="20,0,0,0"/>
+            </Grid>
+        </StackPanel>
+        <RelativePanel>
+            <Button x:ConnectionId='12' Margin="0, 24, 0, 0"                            x:Name="res_button" Width="80">Register</Button>
+            <Button x:ConnectionId='13' Margin="50, 24, 0, 0"                       Width="80" RelativePanel.RightOf="res_button">Cancel</Button>
+        </RelativePanel>
+    </StackPanel>
+</Page>
+

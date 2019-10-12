@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Mp3.Pages.MySong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mp3.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:Mp3.Entity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel x:ConnectionId='2' HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" x:Name="empty">
+            <TextBlock HorizontalAlignment="Center">Empty! Do you want upload a song?</TextBlock>
+            <Button x:ConnectionId='15'                        Margin="0, 20,0,0" HorizontalAlignment="Center">Upload</Button>
+        </StackPanel>
+        <StackPanel>
+            <ListView x:ConnectionId='9' x:Name="MyListSong" >
+                <ListView.ItemTemplate>
+                    <DataTemplate                         >
+                        <StackPanel x:ConnectionId='11' Margin="0,10,0,10" Orientation="Horizontal"                     Tag="{Binding}">
+                            <Ellipse Width="77" Height="77">
+                                <Ellipse.Fill>
+                                    <ImageBrush x:ConnectionId='14'                                 />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <StackPanel Margin="10,10,0,0">
+                                <TextBlock x:ConnectionId='12'                      Style="{ThemeResource BaseTextBlockStyle}"/>
+                                <TextBlock x:ConnectionId='13'                        Style="{ThemeResource BaseTextBlockStyle}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='3' VerticalAlignment="Bottom" x:Name="media">
+            <MediaElement x:ConnectionId='4' x:Name="MyMediaPlayer"/>
+            <CommandBar>
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='5' x:Name="PreviousButton" Icon="Previous" Label="Previous"                               />
+                <AppBarButton x:ConnectionId='6' x:Name="StatusButton" Icon="Play" Label="Play"                             />
+                <AppBarButton x:ConnectionId='7' x:Name="NextButton" Icon="Next" Label="Next"                           />
+                <CommandBar.Content>
+                    <TextBlock x:ConnectionId='8' x:Name="ControlLabel" Text="Please choose a song." Margin="12,14">
+
+                    </TextBlock>
+                </CommandBar.Content>
+            </CommandBar>
+        </StackPanel>
+    </Grid>
+</Page>
+
